@@ -69,7 +69,6 @@ public class RestAssured1 {
 		given().contentType(ContentType.JSON).body(jsonDataInFile).post("/api/users").then().assertThat().and()
 				.statusCode(201).assertThat().and().body("name", equalTo("morpheus")).log().all();
 
-		System.out.println("***********************");
 	}
 
 }
